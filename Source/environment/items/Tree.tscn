@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://environment/items/treePalm.png" type="Texture" id=1]
+
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="Animation" id=2]
+resource_name = "breeze"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.41174, -29.6216 ), Vector2( -4.41174, -29.6216 ), Vector2( -4.41174, -29.6216 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -100.279, -100.178, -100.279 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.41174, -29.6216 ), Vector2( -4.41174, -29.6216 ), Vector2( -4.41174, -29.6216 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -2.67913, 0.0, -2.67913 ]
+}
+
+[node name="Tree" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( -119.733, -241.464 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D"]
+texture = ExtResource( 1 )
+skeleton = NodePath("../Skeleton2D")
+polygon = PoolVector2Array( 134.397, 241.463, 138.24, 208.486, 134.923, 177.969, 133.597, 144.798, 126.962, 115.607, 124.309, 89.7341, 218.514, 75.8024, 209.89, -11.1054, -11.6921, 10.124, 1.57629, 112.954, 94.4548, 97.6952, 97.7719, 126.222, 101.089, 153.422, 101.089, 181.286, 99.7622, 210.476, 102.689, 241.463 )
+uv = PoolVector2Array( 134.397, 241.463, 138.24, 208.486, 134.923, 177.969, 133.597, 144.798, 126.962, 115.607, 124.309, 89.7341, 218.514, 75.8024, 209.89, -11.1054, -11.6921, 10.124, 1.57629, 112.954, 94.4548, 97.6952, 97.7719, 126.222, 101.089, 153.422, 101.089, 181.286, 99.7622, 210.476, 102.689, 241.463 )
+polygons = [ PoolIntArray( 9, 8, 7, 6, 5, 10 ), PoolIntArray( 10, 5, 4, 11 ), PoolIntArray( 11, 4, 3, 12 ), PoolIntArray( 12, 3, 2, 13 ), PoolIntArray( 13, 2, 1, 14 ), PoolIntArray( 14, 1, 0, 15 ) ]
+bones = [ NodePath("Bone2D"), PoolRealArray( 1, 0.44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.44, 1 ), NodePath("Bone2D/Bone2D"), PoolRealArray( 0, 0.56, 0.44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.44, 0.56, 0 ), NodePath("Bone2D/Bone2D/Bone2D"), PoolRealArray( 0, 0, 0.56, 0.44, 0, 0, 0, 0, 0, 0, 0, 0, 0.44, 0.56, 0, 0 ), NodePath("Bone2D/Bone2D/Bone2D/Bone2D"), PoolRealArray( 0, 0, 0, 0.56, 0.44, 0, 0, 0, 0, 0, 0, 0.44, 0.56, 0, 0, 0 ), NodePath("Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0.56, 0.44, 0, 0, 0, 0, 0.44, 0.56, 0, 0, 0, 0 ), NodePath("Bone2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"), PoolRealArray( 0, 0, 0, 0, 0, 0.56, 1, 1, 1, 1, 0.56, 0, 0, 0, 0, 0 ) ]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Node2D"]
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D"]
+position = Vector2( 120.377, 241.385 )
+rest = Transform2D( 1, 0, 0, 1, 120.377, 241.385 )
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D"]
+position = Vector2( 0, -29.6216 )
+rest = Transform2D( 1, 0, 0, 1, 0, -29.6216 )
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D/Bone2D"]
+position = Vector2( -0.630249, -32.1426 )
+rest = Transform2D( 1, 0, 0, 1, -0.630249, -32.1426 )
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( -2.521, -28.9914 )
+rest = Transform2D( 1, 0, 0, 1, -2.521, -28.9914 )
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( -4.41174, -29.6216 )
+rotation = -0.00203742
+rest = Transform2D( 1, 0, 0, 1, -4.41174, -29.6216 )
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D/Bone2D/Bone2D/Bone2D/Bone2D"]
+position = Vector2( -4.41174, -29.6216 )
+rotation = -1.74852
+rest = Transform2D( -0.176712, -0.984263, 0.984263, -0.176712, -4.41174, -29.6216 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "breeze"
+anims/breeze = SubResource( 2 )
