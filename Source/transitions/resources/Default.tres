@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://transitions/Transition.gd" type="Script" id=1]
+[ext_resource path="res://transitions/resources/Transition.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+transition_color = Color( 0, 0, 0, 1 )
+transition_map = ExtResource( 2 )
+transition_in_option = 0
+transition_out_option = 4

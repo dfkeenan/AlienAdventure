@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Transition.gd" type="Script" id=1]
-[ext_resource path="res://Transition.png" type="Texture" id=2]
+[ext_resource path="res://transitions/TransitionLayer.gd" type="Script" id=1]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -11,14 +10,37 @@ uniform float cutoff : hint_range(0,1.0);
 uniform vec4 transition_color : hint_color;
 uniform sampler2D transition_map : hint_albedo;
 
+uniform bool invert;
+uniform bool flip_x;
+uniform bool flip_y;
 
 
 void fragment()
 {
 	COLOR = texture(SCREEN_TEXTURE,SCREEN_UV);
-	vec4 transition = texture(transition_map,SCREEN_UV);
 	
-	if(transition.r < cutoff) 
+	vec2 transition_uv = vec2(SCREEN_UV.x, 1.0 - SCREEN_UV.y);
+	
+	if (flip_x) 
+	{
+		transition_uv.x = 1.0 - transition_uv.x;
+	}
+	
+	if (flip_y) 
+	{
+		transition_uv.y = 1.0 - transition_uv.y;
+	}
+	
+	vec4 transition = texture(transition_map, transition_uv);
+	
+	float transition_amount = transition.r;
+	
+	if (invert)
+	{
+		transition_amount = 1.0 - transition_amount
+	}
+	
+	if(transition_amount < cutoff) 
 	{
 			COLOR.rgb = transition_color.rgb;
 	}
@@ -29,7 +51,9 @@ void fragment()
 shader = SubResource( 1 )
 shader_param/cutoff = 0.0
 shader_param/transition_color = Color( 0, 0, 0, 1 )
-shader_param/transition_map = ExtResource( 2 )
+shader_param/invert = null
+shader_param/flip_x = null
+shader_param/flip_y = null
 
 [node name="Transition" type="CanvasLayer"]
 layer = 128
