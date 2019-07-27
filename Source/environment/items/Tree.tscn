@@ -2,7 +2,6 @@
 
 [ext_resource path="res://environment/items/treePalm.png" type="Texture" id=1]
 
-
 [sub_resource type="CircleShape2D" id=1]
 
 [sub_resource type="Animation" id=2]
