@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "Transition",
 "language": "GDScript",
 "path": "res://transitions/Transition.gd"
+}, {
+"base": "CanvasLayer",
+"class": "TransitionLayer",
+"language": "GDScript",
+"path": "res://transitions/TransitionLayer.gd"
 } ]
 _global_script_class_icons={
-"Transition": ""
+"Transition": "",
+"TransitionLayer": ""
 }
 
 [application]

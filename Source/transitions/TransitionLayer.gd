@@ -1,5 +1,6 @@
 tool
 extends CanvasLayer
+class_name TransitionLayer
 
 #const TransitionOption = preload("res://transitions/Transition.gd").TransitionOption
 
@@ -26,7 +27,7 @@ func set_default_transition(value : Resource) -> void:
 		default_transition = value
 	
 	
-func transition_in(transition : Transition) -> void:	
+func transition_in(transition: Transition) -> void:	
 	$Tween.stop_all()
 	self.cutoff = 1
 	_set_shader_transition(transition, true)
@@ -64,6 +65,16 @@ func _set_shader_transition(transition : Transition, is_in : bool) -> void:
 	
 	var options = new_transition.transition_in_option if is_in else new_transition.transition_out_option
 	
-	material.set("shader_param/invert", options & Transition.TransitionOption.INVERT > 0)
-	material.set("shader_param/flip_x", options & Transition.TransitionOption.FLIP_X > 0)
-	material.set("shader_param/flip_y", options & Transition.TransitionOption.FLIP_Y > 0)
+	material.set("shader_param/invert", options & Transition.TransitionOption.INVERT != 0)
+	material.set("shader_param/flip_x", options & Transition.TransitionOption.FLIP_X != 0)
+	material.set("shader_param/flip_y", options & Transition.TransitionOption.FLIP_Y != 0)
+	
+func _get_configuration_warning():
+	var warnings = PoolStringArray()
+	if not default_transition:
+		warnings.append("% is missing a default transition." % name)
+	
+	elif not default_transition is Transition:
+		warnings.append("% is has invalid a default transition." % name)
+		
+	return warnings.join("\n")
