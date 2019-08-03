@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alien_green.png-f2576cb657a3fc2e643513d616a0ff30.stex"
+path="res://.import/blue_button08.png-34e4cec443a83a740406f533811e3b62.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/alien_green.png"
-dest_files=[ "res://.import/alien_green.png-f2576cb657a3fc2e643513d616a0ff30.stex" ]
+source_file="res://ui/assets/textures/blue_button08.png"
+dest_files=[ "res://.import/blue_button08.png-34e4cec443a83a740406f533811e3b62.stex" ]
 
 [params]
 

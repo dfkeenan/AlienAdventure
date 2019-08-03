@@ -1,9 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ui/HUD.gd" type="Script" id=1]
-[ext_resource path="res://player/alienGreen_badge2.png" type="Texture" id=2]
-[ext_resource path="res://ui/uipack_rpg_sheet.png" type="Texture" id=3]
-[ext_resource path="res://ui/sword_icon.tres" type="Texture" id=4]
+[ext_resource path="res://player/assets/alienGreen_badge2.png" type="Texture" id=2]
+[ext_resource path="res://ui/assets/uipack_rpg_sheet.png" type="Texture" id=3]
+[ext_resource path="res://ui/assets/sword_icon.tres" type="Texture" id=4]
+
+
+
+
 
 [node name="HUD" type="Control"]
 anchor_right = 1.0

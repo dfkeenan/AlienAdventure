@@ -1,0 +1,58 @@
+[gd_resource type="Theme" load_steps=11 format=2]
+
+[ext_resource path="res://ui/assets/textures/disabled_button_styleboxtexture.tres" type="StyleBox" id=1]
+[ext_resource path="res://ui/assets/textures/blue_button07.png" type="Texture" id=2]
+[ext_resource path="res://ui/assets/textures/blue_button09.png" type="Texture" id=3]
+[ext_resource path="res://ui/assets/textures/blue_button08.png" type="Texture" id=4]
+[ext_resource path="res://ui/assets/textures/grey_panel.png" type="Texture" id=5]
+[ext_resource path="res://ui/assets/fonts/default_kenney_future_narrow.tres" type="DynamicFont" id=6]
+
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 3 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id=3]
+content_margin_bottom = 4.0
+texture = ExtResource( 4 )
+region_rect = Rect2( 0, 0, 49, 49 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 10.0
+margin_bottom = 6.0
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 100, 100 )
+margin_left = 6.0
+margin_right = 6.0
+margin_top = 6.0
+margin_bottom = 6.0
+modulate_color = Color( 0.227451, 0.258824, 0.411765, 1 )
+
+[resource]
+default_font = ExtResource( 6 )
+Button/colors/font_color = Color( 0.878431, 0.878431, 0.878431, 1 )
+Button/colors/font_color_disabled = Color( 0.443137, 0.443137, 0.443137, 1 )
+Button/colors/font_color_hover = Color( 0.941176, 0.941176, 0.941176, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = null
+Button/styles/disabled = ExtResource( 1 )
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 3 )
+PanelContainer/styles/panel = SubResource( 4 )

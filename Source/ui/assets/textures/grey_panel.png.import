@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/alienGreen_badge2.png-1dd7dcb6dac9a9d5c3e9b5ffdf2c0932.stex"
+path="res://.import/grey_panel.png-62a57b21572d784bac2c33aed84c7a84.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/alienGreen_badge2.png"
-dest_files=[ "res://.import/alienGreen_badge2.png-1dd7dcb6dac9a9d5c3e9b5ffdf2c0932.stex" ]
+source_file="res://ui/assets/textures/grey_panel.png"
+dest_files=[ "res://.import/grey_panel.png-62a57b21572d784bac2c33aed84c7a84.stex" ]
 
 [params]
 

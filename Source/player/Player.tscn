@@ -1,8 +1,10 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
-[ext_resource path="res://player/alien_green.png" type="Texture" id=2]
-[ext_resource path="res://player/shadow.png" type="Texture" id=3]
+[ext_resource path="res://player/assets/alien_green.png" type="Texture" id=2]
+[ext_resource path="res://player/assets/shadow.png" type="Texture" id=3]
+
+
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 20.0
