@@ -7,8 +7,7 @@
 [ext_resource path="res://ui/assets/textures/grey_panel.png" type="Texture" id=5]
 [ext_resource path="res://ui/assets/fonts/default_kenney_future_narrow.tres" type="DynamicFont" id=6]
 
-
-[sub_resource type="StyleBoxTexture" id=2]
+[sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 49, 49 )
 margin_left = 6.0
@@ -16,7 +15,7 @@ margin_right = 6.0
 margin_top = 6.0
 margin_bottom = 8.0
 
-[sub_resource type="StyleBoxTexture" id=1]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 3 )
 region_rect = Rect2( 0, 0, 49, 49 )
 margin_left = 6.0
@@ -52,7 +51,7 @@ Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = ExtResource( 1 )
 Button/styles/focus = null
-Button/styles/hover = SubResource( 2 )
-Button/styles/normal = SubResource( 1 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 2 )
 Button/styles/pressed = SubResource( 3 )
 PanelContainer/styles/panel = SubResource( 4 )

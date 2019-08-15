@@ -9,17 +9,23 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "GameStateManager",
+"language": "GDScript",
+"path": "res://core/game_state/GameStateManager.gd"
+}, {
 "base": "Resource",
 "class": "Transition",
 "language": "GDScript",
-"path": "res://transitions/Transition.gd"
+"path": "res://core/transitions/Transition.gd"
 }, {
 "base": "CanvasLayer",
 "class": "TransitionLayer",
 "language": "GDScript",
-"path": "res://transitions/TransitionLayer.gd"
+"path": "res://core/transitions/TransitionLayer.gd"
 } ]
 _global_script_class_icons={
+"GameStateManager": "",
 "Transition": "",
 "TransitionLayer": ""
 }
@@ -29,6 +35,11 @@ _global_script_class_icons={
 config/name="Alien Adventure"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+GameStateManager="*res://core/game_state/GameStateManager.gd"
+SceneTransition="*res://core/transitions/TransitionLayer.tscn"
 
 [display]
 

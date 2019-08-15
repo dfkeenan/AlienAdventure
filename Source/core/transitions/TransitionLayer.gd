@@ -30,6 +30,7 @@ func set_default_transition(value : Resource) -> void:
 func transition_in(transition: Transition) -> void:	
 	$Tween.stop_all()
 	self.cutoff = 1
+	$ColorRect.visible = true
 	_set_shader_transition(transition, true)
 	$Tween.interpolate_method(self,"set_cutoff", 1,0,transition_duration,Tween.TRANS_LINEAR,Tween.EASE_IN)
 	$Tween.start()
@@ -72,7 +73,7 @@ func _set_shader_transition(transition : Transition, is_in : bool) -> void:
 func _get_configuration_warning():
 	var warnings = PoolStringArray()
 	if not default_transition:
-		warnings.append("% is missing a default transition." % name)
+		warnings.append("%s is missing a default transition." % name)
 	
 	elif not default_transition is Transition:
 		warnings.append("% is has invalid a default transition." % name)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://transitions/TransitionLayer.gd" type="Script" id=1]
+[ext_resource path="res://core/transitions/TransitionLayer.gd" type="Script" id=1]
+[ext_resource path="res://core/transitions/assets/Default.tres" type="Resource" id=2]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -58,8 +59,10 @@ shader_param/flip_y = null
 [node name="Transition" type="CanvasLayer"]
 layer = 128
 script = ExtResource( 1 )
+default_transition = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 material = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
