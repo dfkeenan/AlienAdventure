@@ -33,13 +33,8 @@ _global_script_class_icons={
 [application]
 
 config/name="Alien Adventure"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Game.tscn"
 config/icon="res://icon.png"
-
-[autoload]
-
-GameStateManager="*res://core/game_state/GameStateManager.gd"
-SceneTransition="*res://core/transitions/TransitionLayer.tscn"
 
 [display]
 

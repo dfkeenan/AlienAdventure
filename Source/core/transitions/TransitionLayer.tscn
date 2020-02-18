@@ -57,6 +57,7 @@ shader_param/flip_x = null
 shader_param/flip_y = null
 
 [node name="Transition" type="CanvasLayer"]
+pause_mode = 2
 layer = 128
 script = ExtResource( 1 )
 default_transition = ExtResource( 2 )
