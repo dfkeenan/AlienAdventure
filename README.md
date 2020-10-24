@@ -1,2 +1,3 @@
-# KenneyCraft
-A godot game experiment
+# Alien Adventure
+
+A godot game experiment.
