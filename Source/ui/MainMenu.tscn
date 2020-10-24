@@ -3,11 +3,13 @@
 [ext_resource path="res://ui/assets/default_theme.tres" type="Theme" id=1]
 [ext_resource path="res://ui/assets/fonts/large_kenney_future_narrow.tres" type="DynamicFont" id=2]
 
-
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 1.0
